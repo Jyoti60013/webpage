@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        function getQueryParameter(name) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        window.onload = function() {
+            var username = getQueryParameter('username');
+            if (username) {
+                document.getElementById('welcome-message').textContent = 'Welcome, ' + username + '!';
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 id="welcome-message">Welcome!</h2>
+        <img src="https://www.google.com/imgres?q=welcome&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fshutterstock%2Fphotos%2F1721907820%2Fdisplay_1500%2Fstock-vector-welcome-calligraphic-inscription-with-smooth-lines-1721907820.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fwelcome-calligraphic-inscription-smooth-lines-1721907820&docid=QLMBEHcRgIO3MM&tbnid=ZHWHZhYxsddF9M&vet=12ahUKEwjdsPOTqdaHAxX4d2wGHaQIOHkQM3oECGAQAA..i&w=1500&h=768&hcb=2&ved=2ahUKEwjdsPOTqdaHAxX4d2wGHaQIOHkQM3oECGAQAA" alt="Welcome Image"><br><br>
+        <p>You have successfully registered. Please <a href="login.html">log in</a> to continue.</p>
+    </div>
+</body>
+</html>
